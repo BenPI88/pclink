@@ -8,3 +8,4 @@ while not i == 10:
 os.system(f"ssh-keygen -f pclink-{id}")
 print("Ready for client to connect!")
 os.system(f"nc -l {random.randint(1000, 9999)} -e pclink-{id}.pub")
+print(f"You can now use this command to ssh into the user:\nssh -i pclink-{id} user@host")
